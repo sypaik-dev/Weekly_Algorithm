@@ -11,7 +11,14 @@
 // ## 13, 33, 17 ==> "NO"
 
 function solution(a, b, c) {
-  let answer = 0;
+  let long = Math.max(a, b, c);
+  let sum = a + b + c;
+  if (long < sum - long) {
+    console.log("YES");
+  } else {
+    console.log("NO");
+  }
   // 삼각형 만드는 조건 : 가장 긴 변의 길이 < 다른 두 변 길이의 합
-  let long = 0;
 }
+
+console.log(solution(6, 7, 11));
