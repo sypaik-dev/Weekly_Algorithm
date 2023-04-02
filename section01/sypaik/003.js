@@ -12,5 +12,6 @@
 // ## 178 ==> 15
 
 function solution(n) {
-  let answer = 0;
+  return Math.ceil(n / 12);
 }
+console.log(solution(23));

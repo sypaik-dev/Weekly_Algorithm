@@ -6,3 +6,17 @@
 // ## 첫 줄에 대문자는 소문자로, 소문자는 대문자로 변환된 문자열을 출력한다.
 
 // # StuDY ==> sTUdy
+
+function solution(str) {
+  let answer = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == str[i].toUpperCase()) {
+      answer += str[i].LowerCase();
+    } else {
+      answer += str[i].toUpperCase();
+    }
+  }
+  return answer;
+}
+let string = "StuDY";
+console.log(solution(string));

@@ -9,9 +9,6 @@
 // ## 5 3 7 11 2 15 17 ==> 2
 
 function solution(numbers) {
-  for (i = 0; i < numbers.length; i++) {
-    numbers.sort(function (a, b) {
-      return a - b;
-    });
-  }
+  let minValue = Math.min(numbers);
+  return minValue;
 }
