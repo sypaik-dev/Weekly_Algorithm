@@ -6,10 +6,6 @@
 // ## 첫 줄에 자연수 N이 주어진다 (3 <= N <= 30)
 // ## 두 번째 줄부터 N개의 문자열이 주어진다. 문자열의 길이는 100을 넘지 않는다.
 
-// ## 첫 줄부터 중복이 제거된 문자열을 차례로 출력한다.
-
-// ## 5 good time good time student ==> good time student
-
 function solution(str) {
   let answer = [];
   for (let i = 0; i < str.length; i++) {
@@ -19,5 +15,3 @@ function solution(str) {
   }
   return answer;
 }
-// let string = ["good", "time", "good", "time", "student"];
-// console.log(solution(string));

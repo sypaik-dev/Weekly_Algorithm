@@ -23,5 +23,4 @@ function solution(numbers) {
   return answer;
 }
 
-// arr = [1, 2, 3, 5];
-// console.log(solution(arr));
+// 임의의 값 min을 주어 비교

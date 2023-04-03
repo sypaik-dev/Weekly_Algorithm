@@ -12,4 +12,6 @@ function solution(str) {
   }
   return answer;
 }
-// console.log(solution("ksekkset"));
+
+// indexOf() 사용
+// 주어진 값과 일치하는 첫 번째 인덱스를 반환하여 중복을 방지할 수 있음

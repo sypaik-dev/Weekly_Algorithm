@@ -6,16 +6,16 @@
 
 // ## 첫 번째 줄에 가장 작은 값을 출력한다.
 
-// ## 5 3 7 11 2 15 17 ==> 2
-
 function solution(numbers) {
-  let min = 100;
+  let min = 0;
   for (let i = 0; i < 7; i++) {
-    if (min > numbers[i]) {
-      min = numbers[i];
+    if (numbers[i] > numbers[i + 1]) {
+      min = numbers[i + 1];
     }
   }
   return min;
 }
-// let arr = [5, 3, 7, 11, 2, 15, 17];
-// console.log(solution(arr));
+let arr = [5, 3, 7, 11, 2, 15, 17];
+console.log(solution(arr));
+
+// 다음 인덱스의 값을 비교하여 설정

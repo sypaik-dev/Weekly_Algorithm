@@ -6,9 +6,6 @@
 
 // ## 첫 번째 줄에 1부터 N까지의 합을 출력
 
-// ## 6 ==> 21
-// ## 10 ==> 55
-
 function solution(n) {
   let sum = 0;
   for (let i = 0; i <= n; i++) {
