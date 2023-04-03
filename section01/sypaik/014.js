@@ -9,3 +9,16 @@
 // ## 첫 줄에 가장 긴 문자열을 출력
 
 // ## 5, teach, time, student, beautiful, good ==> beautiful
+function solution(str) {
+  let answer = "";
+  let maxLength = 0;
+  for (let x of str) {
+    if (maxLength < x.length) {
+      maxLength = x.length;
+      answer = x;
+    }
+  }
+  return answer;
+}
+// let string = ["teacher", "time", "student", "beautiful", "good"];
+// console.log(solution(string));

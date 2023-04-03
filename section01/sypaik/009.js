@@ -7,8 +7,9 @@
 
 // ## BANANA ==> B#N#N#
 
-function solution(voca) {
-  for (let i = 0; i < voca.length; i++) {
-    voca.replaceAll("A", "#");
-  }
+function solution(str) {
+  let answer = str;
+  return answer.replaceAll("A", "#");
 }
+// let string = "BANANA";
+// console.log(solution(string));

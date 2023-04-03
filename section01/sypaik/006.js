@@ -7,11 +7,21 @@
 // ## 첫째 줄에 홀수들의 합을 출력하고, 둘째 줄에 홀수들 중 최소값을 출력한다.
 
 function solution(numbers) {
-  let odd = [];
+  let answer = [];
   let sum = 0;
+  let min = 100;
   for (let i = 0; i < 7; i++) {
-    if (i % 2 == 0) {
-      sum += i;
+    if (numbers[i] % 2 == 1) {
+      sum += numbers[i];
+      if (min > numbers[i]) {
+        min = numbers[i];
+      }
     }
   }
+  answer.push(sum);
+  answer.push(min);
+  return answer;
 }
+
+// arr = [1, 2, 3, 5];
+// console.log(solution(arr));

@@ -7,3 +7,14 @@
 
 // ## study ==> u
 // ## good ==> oo
+
+function solution(str) {
+  let answer = "";
+  if (str.length % 2 == 1) {
+    answer += str[Math.round(str.length / 2 - 1)];
+  } else {
+    answer += str[str.length / 2 - 1] + str[str.length / 2];
+  }
+  return answer;
+}
+// console.log(solution("good"));

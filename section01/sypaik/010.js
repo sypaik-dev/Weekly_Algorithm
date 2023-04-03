@@ -8,12 +8,15 @@
 
 // ## COMPUTERPROGRAMMING, R ==> 3
 
-function solution(str, v) {
-  let answer = 0;
+function solution(str, n) {
+  let count = 0;
   for (let i = 0; i < str.length; i++) {
-    if (str[i] == v) {
-      answer += 1;
+    if (str[i] == n) {
+      count += 1;
     }
   }
-  return answer;
+  return count;
 }
+
+// let string = "COMPUTERPROGRAMMING";
+// console.log(solution(string, "R"));

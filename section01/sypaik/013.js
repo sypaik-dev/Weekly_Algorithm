@@ -9,14 +9,15 @@
 
 function solution(str) {
   let answer = "";
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] == str[i].toUpperCase()) {
-      answer += str[i].LowerCase();
+  for (let x of str) {
+    if (x == x.toUpperCase()) {
+      answer += x.toLowerCase();
     } else {
-      answer += str[i].toUpperCase();
+      answer += x.toUpperCase();
     }
   }
   return answer;
 }
-let string = "StuDY";
-console.log(solution(string));
+
+// let string = "StuDY";
+// console.log(solution(string));

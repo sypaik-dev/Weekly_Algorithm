@@ -7,3 +7,15 @@
 // ## 주어진 날짜와 자동차의 일의 자리 숫자를 보고 10부제를 위반하는 차량의 대수를 출력
 
 // ## 3 | 25 23 11 47 53 17 33 ==> 3
+
+function solution(day, arr) {
+  let count = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 10 == day) {
+      count += 1;
+    }
+  }
+  return count;
+}
+// array = [25, 23, 11, 47, 53, 17, 33];
+// console.log(solution(3, array));

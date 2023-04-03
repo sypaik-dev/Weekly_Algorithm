@@ -21,4 +21,4 @@ function solution(a, b, c) {
   // 삼각형 만드는 조건 : 가장 긴 변의 길이 < 다른 두 변 길이의 합
 }
 
-console.log(solution(6, 7, 11));
+// console.log(solution(6, 7, 11));

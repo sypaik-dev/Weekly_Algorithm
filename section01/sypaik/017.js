@@ -9,3 +9,15 @@
 // ## 첫 줄부터 중복이 제거된 문자열을 차례로 출력한다.
 
 // ## 5 good time good time student ==> good time student
+
+function solution(str) {
+  let answer = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str.indexOf(str[i]) === i) {
+      answer.push(str[i]);
+    }
+  }
+  return answer;
+}
+// let string = ["good", "time", "good", "time", "student"];
+// console.log(solution(string));

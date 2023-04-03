@@ -9,6 +9,13 @@
 // ## 5 3 7 11 2 15 17 ==> 2
 
 function solution(numbers) {
-  let minValue = Math.min(numbers);
-  return minValue;
+  let min = 100;
+  for (let i = 0; i < 7; i++) {
+    if (min > numbers[i]) {
+      min = numbers[i];
+    }
+  }
+  return min;
 }
+// let arr = [5, 3, 7, 11, 2, 15, 17];
+// console.log(solution(arr));

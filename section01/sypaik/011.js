@@ -16,8 +16,5 @@ function solution(str) {
   }
   return answer;
 }
-let string = "KoreaTimeGood";
-console.log(solution(string));
-
-// # 대문자 찾기
-// toUpperCase() 메서드 : 문자열을 대문자로 변환한 값 반환
+// let string = "KoreaTimeGood";
+// console.log(solution(string));
