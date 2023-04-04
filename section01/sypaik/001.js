@@ -6,15 +6,16 @@
 
 function solution(a, b, c) {
   let answer = 0;
-  for (let i = 0; i <= 3; i++) {
-    if (a > b) {
-      answer = b;
-    } else {
-      answer = a;
-    }
-    if (answer > c) {
-      answer = c;
-    }
+  if (a > b) {
+    answer = b;
+  } else {
+    answer = a;
+  }
+  if (answer > c) {
+    answer = c;
   }
   return answer;
 }
+
+// ## 수정사항
+// 불필요한 for문이 들어가 있다.

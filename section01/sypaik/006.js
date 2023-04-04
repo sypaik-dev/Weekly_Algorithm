@@ -10,7 +10,7 @@ function solution(numbers) {
   let answer = [];
   let sum = 0;
   let min = 100;
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] % 2 == 1) {
       sum += numbers[i];
       if (min > numbers[i]) {
@@ -24,3 +24,5 @@ function solution(numbers) {
 }
 
 // 임의의 값 min을 주어 비교
+// ## 수정사항
+// for문에서 종료값을 length로 바꿈
