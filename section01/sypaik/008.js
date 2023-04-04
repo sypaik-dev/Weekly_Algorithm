@@ -5,14 +5,15 @@
 
 // ## 아홉 개의 줄에 걸쳐 난쟁이들의 키가 주어진다. 주어지는 키는 100을 넘지 않는 자연수이며, 아홉 난쟁이의 키는 모두 다르며, 가능한 정답이 여러 가지인 경우에는 아무거나 출력한다.
 
-function solution(arr) {
-  let answer = arr;
-  let sum = answer.reduce((a, b) => a + b, 0);
-  for (let i = 0; i < 8; i++) {
-    for (let j = i + 1; j < 9; j++) {
-      if (sum - (answer[i] + answer[j]) == 100) {
-        answer.splice(j, 1);
-        answer.splice(i, 1);
+function solution(height) {
+  let sum = height.reduce((a, b) => a + b, 0);
+
+  for (let i = 0; i < height.length; i++) {
+    for (let j = i + 1; j < height.length; j++) {
+      if (sum - (height[i] + height[j]) === 100) {
+        height.splice(j, 1);
+        height.splice(i, 1);
+        return console.log(height);
       }
     }
   }
