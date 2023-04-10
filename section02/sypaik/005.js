@@ -4,16 +4,19 @@
 
 function solution(scores) {
   let answer = [];
-  scores.sort(function compare(a, b) {
-    return a - b;
-  });
+  for (let i = 0; i < scores.length; i++) {
+    let rank = 1;
+    for (let j = 0; j < scores.length; j++) {
+      if (scores[j] > scores[i]) {
+        rank++;
+      }
+    }
+    answer.push(rank);
+  }
+  return answer;
 }
 
 // test용
 // test1 = [87, 89, 92, 100, 76];
-
-// test1.sort(function compare(a, b) {
-//   return a - b;
-// });
 
 // console.log(test1);
