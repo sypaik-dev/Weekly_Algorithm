@@ -9,12 +9,18 @@ function solution(scores) {
     for (let j = 0; j < scores.length; j++) {
       if (scores[j] > scores[i]) {
         rank++;
+      } else if (scores[j] === scores[i] && i !== j) {
+        rank++;
       }
     }
     answer.push(rank);
   }
   return answer;
 }
+
+// i번째 학생의 점수를 기준으로 모든 학생들과 비교!
+
+// 만약, 같은 점수를 가진 학생이 있다면?
 
 // test용
 // test1 = [87, 89, 92, 100, 76];
