@@ -7,32 +7,44 @@
 // 각 열의 합
 // 대각선의 합
 
-function solution(N) {
-  const n = matrix.length;
+function solution(n, grid) {
+  let maxSum = 0;
 
-  let rowSums = Array(n).fill(0);
-  let colSums = Array(n).fill(0);
-  let diag1Sum = 0;
-  let diag2Sum = 0;
-
-  // 각 행, 열, 대각선의 합 계산
+  // 행의 합 중 가장 큰 합 구하기
   for (let i = 0; i < n; i++) {
+    let rowSum = 0;
     for (let j = 0; j < n; j++) {
-      rowSums[i] += matrix[i][j];
-      colSums[j] += matrix[i][j];
-      if (i === j) {
-        diag1Sum += matrix[i][j];
-      }
-      if (i + j === n - 1) {
-        diag2Sum += matrix[i][j];
-      }
+      rowSum += grid[i][j];
     }
+    maxSum = Math.max(maxSum, rowSum);
   }
 
-  // 가장 큰 합 출력
-  const maxSum = Math.max(...rowSums, ...colSums, diag1Sum, diag2Sum);
+  // 열의 합 중 가장 큰 합 구하기
+  for (let i = 0; i < n; i++) {
+    let colSum = 0;
+    for (let j = 0; j < n; j++) {
+      colSum += grid[j][i];
+    }
+    maxSum = Math.max(maxSum, colSum);
+  }
+
+  // 왼쪽 대각선의 합 구하기
+  let leftDiagonalSum = 0;
+  for (let i = 0; i < n; i++) {
+    leftDiagonalSum += grid[i][i];
+  }
+  maxSum = Math.max(maxSum, leftDiagonalSum);
+
+  // 오른쪽 대각선의 합 구하기
+  let rightDiagonalSum = 0;
+  for (let i = 0; i < n; i++) {
+    rightDiagonalSum += grid[i][n - 1 - i];
+  }
+  maxSum = Math.max(maxSum, rightDiagonalSum);
+
+  return maxSum;
 }
 
 // test용
-// test1 = [10, 13, 12, 39] ==> 2 * 2의 격자판 표현
-// test2 = [10, 13, 10, 12, 39, 30, 11, 25, 50] ==> 3 * 3의 격자판 표현
+// n = 5, test1 = [10, 13, 12, 39] ==> 2 * 2의 격자판 표현
+// n = 3, test2 = [10, 13, 10, 12, 39, 30, 11, 25, 50] ==> 3 * 3의 격자판 표현
