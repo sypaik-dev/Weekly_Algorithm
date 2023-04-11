@@ -4,16 +4,18 @@
 // 앞에 서 있는 사람들보다 크면 보이고, 작거나 같으면 보이지 않는다!
 
 function solution(numbers) {
-  let count = 0;
+  let count = 1;
+  let max = numbers[0];
   for (let i = 1; i < numbers.length; i++) {
-    if (numbers[i] > numbers[i - 1]) {
-      count += 1;
+    if (max < arr[i]) {
+      max = arr[i];
+      count++;
     }
   }
   return count;
 }
 
-// 앞 문제와 다른 점은 첫번째 값은 비교대상이 없기 때문에 출력하지 않는다
+// 앞뒤만을 비교하는 것이 아니라 순차적으로 키를 비교해야한다.
 
 // test용
 // arr = [130, 135, 148, 140, 145, 150, 150, 153]
