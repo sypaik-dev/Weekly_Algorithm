@@ -9,8 +9,6 @@ function solution(scores) {
     for (let j = 0; j < scores.length; j++) {
       if (scores[j] > scores[i]) {
         rank++;
-      } else if (scores[j] === scores[i] && i !== j) {
-        rank++;
       }
     }
     answer.push(rank);
