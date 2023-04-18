@@ -3,15 +3,9 @@
 // 앞에서 읽을 때나 뒤에서 읽을 때나 같은 문자열을 회문 문자열이라고 한다. 해당 문자열이 회문 문자열이면 "YES", 회문 문자열이 아니면 "NO"출력
 
 function solution(str) {
-  let answer = "";
   str = str.toLowerCase(); // 문자열을 소문자로 통일
   strReverse = str.split("").reverse().join("");
-  if (str === strReverse) {
-    answer += "YES";
-  } else {
-    answer += "NO";
-  }
-  return answer;
+  return str === strReverse ? "YES" : "NO";
 }
 
 // 접근방법
